@@ -49,6 +49,9 @@ class SystemStart:
                 case 2:
                     print(f"{boot} > przykro mi ze nie chcesz podać swojego iminia ale rozumiem to bedziesz jako anonimowy urzytkownikien")
                 
+                case _ : 
+                    print(f"{boot} > przykro mi nie odnalazłem przyciksu :()")
+                    self.powrot()
          
 
 m=SystemStart()
