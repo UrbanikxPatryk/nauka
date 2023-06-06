@@ -1,4 +1,5 @@
 import os
+import menuprogramu
 boot = "Marsx"
 class SystemStart:
  
@@ -29,25 +30,37 @@ class SystemStart:
         
         else:
           self.powrot()   
-         
 
+
+    def przejscie(self):
+        print("w bdowie")     
+#-------------------------------------------------------------------
     def powrot(self):
         print(f"{boot} > cos poszło nie tak moze chcesz sprobować jeszcze raz  lub  czy  nie chcesz wpisywać iminia ? \n"
               f"{boot} > wybierz co chcesz zrobić   ") 
         try: 
+       
             button_input=int(input(f"{boot} > 1: Sproboj jeszcze raz  2: Nie chce wpisywać iminia "))
+       
         except ValueError:
+          
             os.system("cls")
-            print(f"{boot} > mała podpowiedż musisz uzywać liczb anie liter :) ")
+            print(f"{boot} > mała podpowiedż musisz uzywać liczb anie liter :) \n"
+                  "#########################################################")
             self.powrot()
+      
         else:
             match button_input:
                 case 1: 
-                    m=SystemStart()
+                    m=SystemStart()       
                     m.przywitanie()
                     m.name()   
                 case 2:
                     print(f"{boot} > przykro mi ze nie chcesz podać swojego iminia ale rozumiem to bedziesz jako anonimowy urzytkownikien")
+                    name_input="bez nazwy  "
+                    next=menuprogramu.MenuProgramu(name_input)
+                    next.menuglowne()
+
                 
                 case _ : 
                     print(f"{boot} > przykro mi nie odnalazłem przyciksu :()")
