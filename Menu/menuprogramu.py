@@ -1,5 +1,5 @@
 import os
-from Kalkulator import kalkulator
+import Kalkulator.kalkulator as kalkulator
 class MenuProgramu:
     
     def __init__(self,name_input , boot) -> None:
@@ -15,12 +15,11 @@ class MenuProgramu:
     def menuglowen(self):
       # dodanie zegara 
      print(f"\t\t\t\t\t\t\t\t\t Uzytkownnik : {self.name_input}")
-     print("\t\t\t\tMenu Glowne\n"
+     print("\t\t\t\t\tMenu Glowne\n"
            "\t\t\t\t1: Kalkulator\n"
            "\t\t\t\t2: Wykresy\n"
            "\t\t\t\t3: Wprowadzaine danych\n"
-           "\t\t\t\t0: Zakoniczenie Programu\n"
-           "\t\t\t|-------------------------------| ")
+           "\t\t\t\t0: Zakoniczenie Programu\n")
      self.button()
 
     def button(self):
@@ -35,7 +34,7 @@ class MenuProgramu:
             match button_input:
                 case 1 : 
                     os.system("cls")
-                    kal=kalkulator.MEnuKalkulaotr()
+                    kal=kalkulator.MenuKalkulaotr(self.boot,self.name_input)
                     kal.menu()
                 case 2 : 
                     os.system("cls")

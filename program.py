@@ -1,5 +1,7 @@
 import os
 import Menu.menuprogramu as menuprogramu
+import Kalkulator.kalkulator as kalkulator
+
 boot = "Marsx"
 class SystemStart:
  
@@ -73,14 +75,17 @@ class SystemStart:
                     os.system("cls")
                     print(f"{boot} > przykro mi ze nie chcesz podać swojego iminia ale rozumiem to bedziesz jako anonimowy urzytkownikien")
                     name_input="bez nazwy  "
-                    next=menuprogramu.MenuProgramu(name_input, boot)
-                    next.menuglowen()
+                    menu=menuprogramu.MenuProgramu(name_input, boot)
+                    menu.menuglowen()
 
                 
                 case _ : 
                     print(f"{boot} > przykro mi nie odnalazłem przyciksu :()")
                     self.return_function()
          
+
+
+
 if __name__ == "__main__":
     m=SystemStart()
     m.przywitanie()
