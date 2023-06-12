@@ -1,5 +1,5 @@
 import os
-import menuprogramu
+import Menu.menuprogramu as menuprogramu
 boot = "Marsx"
 class SystemStart:
  
