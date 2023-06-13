@@ -3,6 +3,10 @@ class MenuKalkulaotr:
        self.boot=boot
        self.name_input=name_input
 
+    def powitanie(self):
+        print(f"{self.boot} > witam w  Menu Kalkulatora {self.name_input}\n"
+              f"")
+
+
     def menu(self):
-        print(f"{self.boot} > witam w  Menu Kalkulatora {self.name_input}")
-            
+        pass         

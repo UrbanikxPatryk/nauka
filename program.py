@@ -1,6 +1,6 @@
 import os
 import Menu.menuprogramu as menuprogramu
-import Kalkulator.kalkulator as kalkulator
+
 
 boot = "Marsx"
 class SystemStart:
@@ -14,11 +14,11 @@ class SystemStart:
               
        
         
-    def name(self):
+    def name(self)->str:
          name_input=input("Podaj swoje imie : ")
          self.odpowiedzi(name_input)
 
-    def sprawdznie(self, name_input ):
+    def sprawdznie(self, name_input )->str:
          if len(name_input)<=2:
              return False 
          else:
@@ -50,7 +50,7 @@ class SystemStart:
              
 
 
-#-------------------------------------------------------------------
+
     def return_function(self):
         print(f"{boot} > cos poszło nie tak moze chcesz sprobować jeszcze raz  lub  czy  nie chcesz wpisywać iminia ? \n"
               f"{boot} > wybierz co chcesz zrobić   ") 

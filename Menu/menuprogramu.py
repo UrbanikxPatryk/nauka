@@ -35,6 +35,7 @@ class MenuProgramu:
                 case 1 : 
                     os.system("cls")
                     kal=kalkulator.MenuKalkulaotr(self.boot,self.name_input)
+                    kal.powitanie()
                     kal.menu()
                 case 2 : 
                     os.system("cls")
