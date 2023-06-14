@@ -15,11 +15,12 @@ class MenuProgramu:
     def menuglowen(self):
       # dodanie zegara 
      print(f"\t\t\t\t\t\t\t\t\t Uzytkownnik : {self.name_input}")
-     print("\t\t\t\t\tMenu Glowne\n"
-           "\t\t\t\t1: Kalkulator\n"
-           "\t\t\t\t2: Wykresy\n"
-           "\t\t\t\t3: Wprowadzaine danych\n"
-           "\t\t\t\t0: Zakoniczenie Programu\n")
+     print("\t\t\t\t\tMenu Glowne\n")
+     listpoleceni=["1: Kalulator", "2: Generator Wykresu " , "0: Exit "]
+     
+     for x in listpoleceni:
+         print(x)
+
      self.button()
 
     def button(self):
@@ -37,6 +38,7 @@ class MenuProgramu:
                     kal=kalkulator.MenuKalkulaotr(self.boot,self.name_input)
                     kal.powitanie()
                     kal.menu()
+                    kal.button()
                 case 2 : 
                     os.system("cls")
                     print(f" {self.boot}  W  budowie")   
